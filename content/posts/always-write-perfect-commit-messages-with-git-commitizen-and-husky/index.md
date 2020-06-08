@@ -3,6 +3,7 @@ title: 'Always write perfect commit messages with Git Commitizen and Husky'
 date: '2019-05-13'
 categories: ['tools']
 tags: ['git']
+additionalTags: ['commitlint', 'husky', 'conventional', 'commits', 'linting', 'commitizen']
 thumbnail: '../../thumbnails/git.png'
 ---
 

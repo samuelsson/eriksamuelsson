@@ -3,6 +3,7 @@ title: 'How to install and configure Drone CI on a self-hosted server'
 date: '2019-02-27'
 categories: ['tools']
 tags: ['drone', 'cicd', 'docker']
+additionalTags: ['continues', 'integration', 'deployment', 'compose', 'container', 'pipeline']
 thumbnail: '../../thumbnails/drone.png'
 ---
 

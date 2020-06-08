@@ -36,6 +36,19 @@ const Seo = ({ pageTitle, pageDescription, path, postSEO }) => {
   const metaUrl = path ? `${baseUrl}${path}` : baseUrl;
   const metaImage = `${baseUrl}/logo.png`;
 
+  // Combining normal tags with additional SEO tags without duplicates
+  const allTags = () => {
+    if (postSEO) {
+      const tags = postSEO.tags || [];
+      const additionalTags = postSEO.additionalTags || [];
+      const tagSet = new Set([...tags, ...additionalTags]);
+
+      return [...tagSet];
+    }
+
+    return [];
+  };
+
   return (
     <Helmet
       title={pageTitle}
@@ -72,11 +85,9 @@ const Seo = ({ pageTitle, pageDescription, path, postSEO }) => {
           content={new Date(postSEO.updated).toISOString()}
         />
       )}
-      {postSEO &&
-        postSEO.tags &&
-        postSEO.tags.map(tag => (
-          <meta key={tag} property="article:tag" content={tag} />
-        ))}
+      {allTags().map((tag) => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={social.twitter} />
@@ -95,6 +106,7 @@ Seo.propTypes = {
     published: PropTypes.string.isRequired,
     updated: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
+    additionalTags: PropTypes.arrayOf(PropTypes.string),
   }),
 };
 

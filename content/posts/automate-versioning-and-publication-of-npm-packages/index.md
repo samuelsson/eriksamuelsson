@@ -3,6 +3,7 @@ title: 'Automate versioning and publication of npm packages'
 date: '2020-06-06'
 categories: ['tools']
 tags: ['npm', 'git']
+additionalTags: ['semver', 'standard-version', 'semantic-release', 'commitlint', 'conventional', 'commits']
 thumbnail: '../../thumbnails/npm.png'
 ---
 

@@ -3,6 +3,7 @@ title: "Add HTTPS to Nginx blocks with Let's Encrypt"
 date: '2018-11-19'
 categories: ['tools']
 tags: ['security', 'https', 'nginx', 'web server']
+additionalTags: ['lets encrypt', 'ssl', 'certificate', 'certbot', 'http', 'domain']
 thumbnail: '../../thumbnails/nginx.png'
 ---
 

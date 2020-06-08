@@ -24,13 +24,21 @@ const Post = ({ data }) => {
     excerpt,
     fields: { slug },
   } = markdownRemark;
-  const { title, date, tags, categories, thumbnail } = frontmatter;
+  const {
+    title,
+    date,
+    tags,
+    additionalTags,
+    categories,
+    thumbnail,
+  } = frontmatter;
   const thumbnailImage = thumbnail && thumbnail.childImageSharp.fixed;
 
   const postSEO = {
     published: date,
     updated: undefined,
     tags,
+    additionalTags,
   };
 
   return (
@@ -71,6 +79,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         title
         tags
+        additionalTags
         categories
         thumbnail {
           childImageSharp {

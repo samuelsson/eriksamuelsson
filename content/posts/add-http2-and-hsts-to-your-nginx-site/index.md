@@ -3,6 +3,7 @@ title: 'Add HTTP/2 and HSTS to your Nginx site'
 date: '2018-11-27'
 categories: ['tools']
 tags: ['security', 'https', 'nginx', 'web server']
+additionalTags: ['hsts', 'ssl', 'http2', 'lets encrypt']
 thumbnail: '../../thumbnails/nginx.png'
 ---
 
