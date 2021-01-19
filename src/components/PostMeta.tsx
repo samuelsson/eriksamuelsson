@@ -14,7 +14,7 @@ type PostMetaProps = {
 const StyledPostMeta = styled.div`
   padding: 0.5rem 0;
   font-size: 0.8rem;
-  color: ${colors.gray[700]};
+  color: ${({ theme }) => theme.PostMeta.color};
 
   > span {
     display: inline-block;

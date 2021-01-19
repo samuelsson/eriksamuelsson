@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { colors, mediaQueries, variables } from '../styles';
+import { mediaQueries, variables } from '../styles';
 
 const StyledFooterContainer = styled.div`
-  border-top: 2px solid ${colors.gray[300]};
-  background-color: ${colors.gray[200]};
+  border-top: 2px solid ${({ theme }) => theme.Footer.borderTop};
+  background-color: ${({ theme }) => theme.Footer.backgroundColor};
 `;
 
 const StyledFooter = styled.footer`

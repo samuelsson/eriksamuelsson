@@ -31,17 +31,19 @@ const StyledTag = styled.a`
   margin: 0.5rem;
   border-radius: 5px;
   border: none;
-  color: ${colors.gray[700]};
+  color: ${({ theme }) => theme.PostHeader.StyledTag.color};
   text-decoration: none;
-  background-color: ${colors.gray[300]};
-  box-shadow: 0 2px 3px ${colors.gray[500]};
+  background-color: ${({ theme }) =>
+    theme.PostHeader.StyledTag.backgroundColor};
+  box-shadow: 0 2px 3px ${({ theme }) => theme.PostHeader.StyledTag.boxShadow};
   font-size: 0.8rem;
 
   transition: all 0.2s;
 
   &:hover {
     background-color: ${colors.blue};
-    box-shadow: 0 2px 5px ${colors.gray[600]};
+    box-shadow: 0 2px 5px
+      ${({ theme }) => theme.PostHeader.StyledTag.hoverBoxShadow};
     color: #fff;
   }
 `;

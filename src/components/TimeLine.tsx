@@ -31,7 +31,7 @@ const TimelineTrace = css`
   top: 0;
   left: 79px;
   bottom: 0;
-  border-right: solid 2px ${colors.gray[500]};
+  border-right: solid 2px ${({ theme }) => theme.TimeLine.colorBorderRight};
   width: 0;
   content: '';
 

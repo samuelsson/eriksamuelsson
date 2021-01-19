@@ -33,12 +33,12 @@ const StyledNavigation = styled.nav`
         &:hover {
           border: none;
           background-color: transparent;
-          color: ${colors.black};
+          color: ${({ theme }) => theme.Navigation.colorHover};
         }
       }
       
       .active {
-        color: ${colors.black};
+        color: ${({ theme }) => theme.Navigation.colorActive};
       }
     }
   }

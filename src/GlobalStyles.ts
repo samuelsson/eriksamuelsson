@@ -2,14 +2,15 @@ import './styles/prism.css';
 
 import { createGlobalStyle } from 'styled-components';
 import { colors, mediaQueries } from './styles';
+import Theme from './styles/theme/type';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   body {
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
-    background-color: ${colors.gray[100]};
-    color: ${colors.gray[800]};
+    background-color: ${({ theme }) => theme.body.backgroundColor};
+    color: ${({ theme }) => theme.body.color};
     font-size: 1em;
     line-height: 1.5;
     
@@ -72,9 +73,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 1rem;
     box-sizing: border-box;
-    border-left: 0.5rem solid ${colors.gray[600]};
-    color: ${colors.gray[700]};
-    background-color: ${colors.gray[200]};
+    border-left: 0.5rem solid ${({ theme }) => theme.blockquote.borderLeft};
+    color: ${({ theme }) => theme.blockquote.color};
+    background-color: ${({ theme }) => theme.blockquote.backgroundColor};
     box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
     
     p:first-child {
